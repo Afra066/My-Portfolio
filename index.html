@@ -1,54 +1,425 @@
 
-<!-- Project Screenshots -->
-<h4 class="gallery-title">
-    Project Screenshots
-</h4>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="project-gallery">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="gallery-item">
-        <img src="Images/HomePage.png" alt="Home Page">
-        <p>Home Page</p>
-    </div>
+    <meta name="description" content="Portfolio of Iyoobkhan Fathima Afra, HNDIT Undergraduate and aspiring IT professional.">
 
-    <div class="gallery-item">
-        <img src="Images/features.png" alt="Features Page">
-        <p>Features Page</p>
-    </div>
+    <meta name="author" content="Iyoobkhan Fathima Afra">
 
-    <div class="gallery-item">
-        <img src="Images/login.png" alt="Login Page">
-        <p>Login Page</p>
-    </div>
+    <title>Fathima Afra | IT Portfolio</title>
 
-    <div class="gallery-item">
-        <img src="Images/Dashboard.png" alt="Dashboard">
-        <p>Dashboard</p>
-    </div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="gallery-item">
-        <img src="Images/Products.png" alt="Products Page">
-        <p>Products Page</p>
-    </div>
+<body>
 
-    <div class="gallery-item">
-        <img src="Images/Customers.png" alt="Customers Management">
-        <p>Customers Management</p>
-    </div>
+    <!-- Navigation Bar -->
+    <header class="header">
 
-    <div class="gallery-item">
-        <img src="Images/Employees.png" alt="Employees Management">
-        <p>Employees Management</p>
-    </div>
+        <nav class="navbar">
 
-    <div class="gallery-item">
-        <img src="Images/Reports.png" alt="Reports Page">
-        <p>Reports Page</p>
-    </div>
+            <a href="#home" class="logo">
+                Fathima<span>.</span>
+            </a>
 
-    <div class="gallery-item">
-        <img src="Images/Expenses.png" alt="Expenses Page">
-        <p>Expenses Page</p>
-    </div>
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
 
-</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="hero section" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-greeting">Hello, I'm</p>
+
+            <h1>Iyoobkhan Fathima Afra</h1>
+
+            <h2>HNDIT Undergraduate</h2>
+
+            <p>
+                An aspiring IT professional passionate about
+                Software Development, Web Development and
+                Software Quality Assurance.
+            </p>
+
+            <p>
+                Currently seeking a six-month industrial training
+                opportunity to develop my technical skills and
+                gain practical industry experience.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn primary-btn">
+                    Contact Me
+                </a>
+
+                <a href="#projects" class="btn secondary-btn">
+                    View My Projects
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+
+        <div class="section-heading">
+            <p>GET TO KNOW ME</p>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                I am Iyoobkhan Fathima Afra, an HNDIT Undergraduate
+                from the Sri Lanka Institute of Advanced Technological
+                Education (SLIATE), ATI Gampaha.
+            </p>
+
+            <p>
+                I have completed my HNDIT final-year examinations
+                and am looking for a six-month industrial training
+                opportunity in the IT field.
+            </p>
+
+            <p>
+                I am interested in Software Development,
+                Web Development, Software Testing and Database
+                Management. I am a quick learner, a responsible
+                team player and eager to learn new technologies
+                while contributing to an organization.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+
+        <div class="section-heading">
+            <p>MY TECHNICAL ABILITIES</p>
+            <h2>My Skills</h2>
+        </div>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>Programming & Web Development</h3>
+                <ul>
+                    <li>PHP</li>
+                    <li>Laravel Framework</li>
+                    <li>Java</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Database Management</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>SQL</li>
+                    <li>Relational Database Design</li>
+                    <li>Database Management</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Software & Tools</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Visual Studio Code</li>
+                    <li>XAMPP</li>
+                    <li>NetBeans</li>
+                    <li>MS Office</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Software Testing</h3>
+                <ul>
+                    <li>Manual Testing</li>
+                    <li>Software Testing Fundamentals</li>
+                    <li>SDLC</li>
+                    <li>STLC</li>
+                    <li>Software Quality Assurance</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Other Skills</h3>
+                <ul>
+                    <li>Operating Systems</li>
+                    <li>Networking Basics</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Time Management</li>
+                    <li>Communication</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+
+        <div class="section-heading">
+            <p>MY ACADEMIC BACKGROUND</p>
+            <h2>Education</h2>
+        </div>
+
+        <div class="education-container">
+
+            <div class="education-card">
+
+                <h3>Higher National Diploma in Information Technology (HNDIT)</h3>
+
+                <h4>SLIATE – ATI Gampaha</h4>
+
+                <p>2024 – Present</p>
+
+                <p>
+                    Completed HNDIT final-year examinations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+
+        <div class="section-heading">
+            <p>WHAT I HAVE BUILT</p>
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="Images/Dashboard.png"
+                    alt="Inventory Management System Dashboard">
+
+            </div>
+
+            <div class="project-info">
+
+                <p class="project-type">
+                    HNDIT FINAL-YEAR PROJECT
+                </p>
+
+                <h3>
+                    Inventory Management System for a Retail Business
+                </h3>
+
+                <p>
+                    A web-based application developed to help retail
+                    businesses manage products, customers, suppliers
+                    and inventory-related activities efficiently.
+                </p>
+
+                <div class="project-tech">
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project-buttons">
+
+                    <a
+                        href="https://github.com/Afra066/Inventory-Management-System-for-a-Retail-Business"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn primary-btn">
+                        View on GitHub
+                    </a>
+
+                    <span class="btn secondary-btn">
+                        Live Demo – Coming Soon
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Project Screenshots -->
+        <h4 class="gallery-title">
+            Project Screenshots
+        </h4>
+
+        <div class="project-gallery">
+
+            <div class="gallery-item">
+                <img src="Images/HomePage.png" alt="Home Page">
+                <p>Home Page</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/features.png" alt="Features Page">
+                <p>Features Page</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/login.png" alt="Login Page">
+                <p>Login Page</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Dashboard.png" alt="Dashboard">
+                <p>Dashboard</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Products.png" alt="Products Page">
+                <p>Products Page</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Customers.png" alt="Customers Management">
+                <p>Customers Management</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Employees.png" alt="Employees Management">
+                <p>Employees Management</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Reports.png" alt="Reports Page">
+                <p>Reports Page</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Images/Expenses.png" alt="Expenses Page">
+                <p>Expenses Page</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+
+        <div class="section-heading">
+            <p>LET'S CONNECT</p>
+            <h2>Contact Me</h2>
+        </div>
+
+        <div class="contact-content">
+
+            <p>
+                I am currently looking for a six-month IT industrial
+                training opportunity. Feel free to contact me for
+                internship opportunities or professional connections.
+            </p>
+
+            <div class="contact-details">
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:fathima0606afra@gmail.com">
+                        fathima0606afra@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn:</strong>
+                    <a
+                        href="https://www.linkedin.com/in/iyoobkhan-fathima-afra-679913316/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View LinkedIn Profile
+                    </a>
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a
+                        href="https://github.com/Afra066"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View GitHub Profile
+                    </a>
+                </p>
+
+            </div>
+
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=fathima0606afra@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary-btn">
+                Send Me an Email
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Iyoobkhan Fathima Afra.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed & Developed by Fathima Afra
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
