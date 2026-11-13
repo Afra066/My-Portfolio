@@ -1,65 +1,79 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Mobile Navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
     if (menuToggle && navLinks) {
 
         menuToggle.addEventListener("click", function () {
+
             navLinks.classList.toggle("show");
+
+            const isExpanded = navLinks.classList.contains("show");
+            menuToggle.setAttribute("aria-expanded", isExpanded);
+
         });
 
         document.querySelectorAll(".nav-links a").forEach(function (link) {
+
             link.addEventListener("click", function () {
+
                 navLinks.classList.remove("show");
+                menuToggle.setAttribute("aria-expanded", "false");
+
             });
+
         });
+
     }
 
-    // Image Preview
+
+    // IMAGE LIGHTBOX
     const galleryImages = document.querySelectorAll(
         ".project-gallery .gallery-item img"
     );
 
-    const lightbox = document.createElement("div");
-    lightbox.className = "image-lightbox";
+    const lightbox = document.getElementById("image-lightbox");
+    const previewImage = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
 
-    lightbox.innerHTML = `
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="Project Screenshot Preview">
-    `;
+    if (lightbox && previewImage && closeButton) {
 
-    document.body.appendChild(lightbox);
+        galleryImages.forEach(function (image) {
 
-    const previewImage = lightbox.querySelector("img");
-    const closeButton = lightbox.querySelector(".lightbox-close");
+            image.addEventListener("click", function () {
 
-    galleryImages.forEach(function (image) {
+                previewImage.src = image.src;
+                previewImage.alt = image.alt;
 
-        image.addEventListener("click", function () {
-            previewImage.src = image.src;
-            previewImage.alt = image.alt;
-            lightbox.style.display = "flex";
+                lightbox.style.display = "flex";
+
+            });
+
         });
 
-    });
-
-    closeButton.addEventListener("click", function () {
-        lightbox.style.display = "none";
-    });
-
-    lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
+        closeButton.addEventListener("click", function () {
             lightbox.style.display = "none";
-        }
-    });
+        });
 
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            lightbox.style.display = "none";
-        }
-    });
+        lightbox.addEventListener("click", function (event) {
+
+            if (event.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+
+        });
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+                lightbox.style.display = "none";
+            }
+
+        });
+
+    }
 
 });
