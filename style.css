@@ -22,7 +22,10 @@ section {
     scroll-margin-top: 80px;
 }
 
-/* NAVIGATION */
+/* ==============================
+   NAVIGATION
+============================== */
+
 header {
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(0,0,0,0.07);
@@ -74,7 +77,10 @@ header {
     cursor: pointer;
 }
 
-/* HOME SECTION */
+/* ==============================
+   HOME SECTION
+============================== */
+
 .hero {
     min-height: 570px;
     display: flex;
@@ -116,9 +122,13 @@ header {
     max-width: 680px;
     color: #e6eaf7;
     font-size: 17px;
+    margin-bottom: 10px;
 }
 
-/* BUTTONS */
+/* ==============================
+   BUTTONS
+============================== */
+
 .hero-buttons,
 .project-buttons {
     display: flex;
@@ -133,6 +143,7 @@ header {
     border-radius: 7px;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .primary-btn {
@@ -162,7 +173,10 @@ header {
     color: #263b80;
 }
 
-/* COMMON SECTIONS */
+/* ==============================
+   COMMON SECTIONS
+============================== */
+
 .section {
     max-width: 1150px;
     margin: auto;
@@ -187,7 +201,10 @@ header {
     margin-top: 5px;
 }
 
-/* ABOUT */
+/* ==============================
+   ABOUT
+============================== */
+
 .about-content {
     max-width: 850px;
     margin: auto;
@@ -201,7 +218,10 @@ header {
     margin-bottom: 15px;
 }
 
-/* SKILLS */
+/* ==============================
+   SKILLS
+============================== */
+
 .skills-section {
     max-width: none;
     background: #eef1fb;
@@ -222,7 +242,7 @@ header {
 
 .skill-card {
     background: white;
-    padding: 20px 12px;
+    padding: 22px 15px;
     text-align: center;
     border-radius: 10px;
     font-weight: bold;
@@ -231,13 +251,30 @@ header {
     transition: 0.3s;
 }
 
+.skill-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
 .skill-card:hover {
     transform: translateY(-5px);
     background: #526bd8;
     color: white;
 }
 
-/* EDUCATION */
+/* ==============================
+   EDUCATION
+============================== */
+
 .education-card {
     max-width: 800px;
     margin: auto;
@@ -253,7 +290,15 @@ header {
     margin-bottom: 12px;
 }
 
-/* PROJECTS */
+.education-card h4 {
+    margin-bottom: 8px;
+    color: #526bd8;
+}
+
+/* ==============================
+   PROJECTS
+============================== */
+
 .projects-section {
     max-width: none;
     background: #f0f2f9;
@@ -274,6 +319,7 @@ header {
 }
 
 /* MAIN PROJECT IMAGE */
+
 .project-image {
     max-width: 650px;
     margin: 0 auto 30px;
@@ -292,6 +338,7 @@ header {
 }
 
 /* PROJECT INFORMATION */
+
 .project-type {
     color: #526bd8;
     font-size: 13px;
@@ -305,6 +352,12 @@ header {
     font-size: 25px;
     margin-bottom: 15px;
 }
+
+.project-info > p:not(.project-type) {
+    margin-bottom: 12px;
+}
+
+/* TECHNOLOGIES */
 
 .project-tech {
     display: flex;
@@ -323,6 +376,7 @@ header {
 }
 
 /* PROJECT GALLERY */
+
 .gallery-title {
     margin-top: 35px;
     margin-bottom: 20px;
@@ -371,11 +425,15 @@ header {
 }
 
 /* PROJECT BUTTONS */
+
 .project-buttons {
     justify-content: center;
 }
 
-/* IMAGE PREVIEW */
+/* ==============================
+   IMAGE PREVIEW
+============================== */
+
 .image-lightbox {
     display: none;
     position: fixed;
@@ -403,23 +461,39 @@ header {
     cursor: pointer;
 }
 
-/* CONTACT */
+/* ==============================
+   CONTACT
+============================== */
+
 .contact-section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 75px 25px;
     text-align: center;
+    background: #ffffff;
+}
+
+.contact-section .section-heading {
+    margin-bottom: 25px;
 }
 
 .contact-message {
-    margin-bottom: 25px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555f73;
+    font-size: 16px;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 18px;
 }
 
 .contact-links a {
+    display: inline-block;
     background: #263b80;
     color: white;
     padding: 12px 25px;
@@ -433,16 +507,24 @@ header {
     transform: translateY(-3px);
 }
 
-/* FOOTER */
+/* ==============================
+   FOOTER
+============================== */
+
 footer {
     background: #172653;
     color: white;
     text-align: center;
     padding: 22px;
+    font-size: 14px;
 }
 
-/* RESPONSIVE DESIGN */
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
 @media (max-width: 900px) {
+
     .project-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -450,11 +532,20 @@ footer {
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .nav-links {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 600px) {
+
     .navbar {
         flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 21px;
     }
 
     .menu-toggle {
@@ -498,6 +589,18 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .skill-card {
+        padding: 18px 10px;
+    }
+
+    .skill-card h3 {
+        font-size: 14px;
+    }
+
+    .skill-card li {
+        font-size: 13px;
+    }
+
     .project-card {
         padding: 20px;
     }
@@ -511,6 +614,10 @@ footer {
         max-height: 220px;
     }
 
+    .project-info h3 {
+        font-size: 21px;
+    }
+
     .project-gallery {
         grid-template-columns: 1fr;
     }
@@ -521,5 +628,23 @@ footer {
 
     .gallery-title {
         font-size: 20px;
+    }
+
+    .contact-section {
+        padding: 55px 18px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .lightbox-close {
+        right: 20px;
+        top: 10px;
     }
 }
